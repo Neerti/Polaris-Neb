@@ -193,7 +193,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/liberia/engineeringreactor)
 "az" = (
 /obj/machinery/meter/turf,
@@ -207,14 +207,14 @@
 	dir = 4;
 	id_tag = "merch_radaway"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/liberia/engineeringreactor)
 "aA" = (
 /obj/machinery/port_gen/pacman/super/potato,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/liberia/engineeringreactor)
 "aC" = (
 /obj/machinery/door/window/brigdoor/northleft{

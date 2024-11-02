@@ -12,16 +12,9 @@
 /obj/abstract/submap_landmark/joinable_submap/unishi,
 /turf/space,
 /area/space)
-"ad" = (
-/obj/effect/wingrille_spawn/reinforced/full,
-/turf/floor,
-/area/unishi/bridge)
-"ae" = (
-/turf/floor/airless,
-/area/unishi/bridge)
 "af" = (
 /obj/effect/wingrille_spawn/reinforced/full,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/unishi/bridge)
 "ag" = (
 /obj/machinery/computer/ship/engines,
@@ -143,18 +136,18 @@
 /area/unishi/bridge)
 "aC" = (
 /obj/machinery/shipsensors,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aD" = (
 /turf/wall/titanium,
 /area/unishi/bridge)
 "aE" = (
 /obj/structure/closet/crate/internals,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aF" = (
 /obj/structure/closet/toolcloset,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aG" = (
 /obj/structure/fireaxecabinet,
@@ -162,18 +155,18 @@
 /area/unishi/bridge)
 "aH" = (
 /obj/structure/closet/l3closet,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aI" = (
 /obj/structure/closet/radiation,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aJ" = (
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aK" = (
 /obj/machinery/light/small,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aL" = (
 /obj/machinery/alarm{
@@ -181,7 +174,7 @@
 	pixel_x = -23;
 	req_access = newlist()
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aM" = (
 /obj/structure/cable{
@@ -199,10 +192,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aO" = (
-/turf/floor/airless,
+/turf/floor/plating,
 /area/space)
 "aP" = (
 /turf/wall/titanium,
@@ -211,7 +204,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aR" = (
 /turf/wall,
@@ -228,17 +221,17 @@
 /area/unishi/living)
 "aT" = (
 /obj/structure/largecrate,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aU" = (
 /obj/structure/closet/crate/med_crate/burn,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aV" = (
 /obj/structure/closet/secure_closet/chemical{
 	req_access = newlist()
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aW" = (
 /obj/structure/rack,
@@ -251,7 +244,7 @@
 	pixel_y = -30;
 	dir = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "aX" = (
 /obj/machinery/door/airlock/highsecurity/bolted{
@@ -292,15 +285,15 @@
 /obj/structure/bedsheetbin/mapped,
 /obj/structure/closet/wardrobe,
 /obj/random/handgun,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "bc" = (
 /obj/structure/closet/crate/med_crate/toxin,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "bd" = (
 /obj/structure/closet/crate/medical,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "be" = (
 /turf/wall/titanium,
@@ -329,11 +322,11 @@
 /area/unishi/living)
 "bj" = (
 /obj/structure/closet/crate/med_crate/trauma,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "bk" = (
 /obj/structure/closet/crate/med_crate/oxyloss,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "bl" = (
 /obj/structure/fitness/weightlifter,
@@ -399,9 +392,6 @@
 	},
 /turf/wall,
 /area/unishi/living)
-"bv" = (
-/turf/floor,
-/area/unishi/living)
 "bw" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/blue,
@@ -435,7 +425,7 @@
 /area/unishi/living)
 "bB" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/living)
 "bC" = (
 /obj/structure/closet,
@@ -524,7 +514,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/living)
 "bL" = (
 /obj/structure/bed/chair/janicart,
@@ -536,7 +526,7 @@
 /obj/structure/fireaxecabinet{
 	pixel_y = 32
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/living)
 "bM" = (
 /turf/wall/titanium,
@@ -557,7 +547,7 @@
 "bP" = (
 /obj/item/stool/padded,
 /obj/item/box/lights/bulbs,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/living)
 "bQ" = (
 /obj/machinery/optable,
@@ -606,10 +596,10 @@
 "bX" = (
 /obj/random/tool,
 /obj/random/tool,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/unishi/living)
 "bY" = (
-/turf/floor/airless,
+/turf/floor/plating,
 /area/unishi/living)
 "bZ" = (
 /obj/machinery/door/window,
@@ -643,14 +633,14 @@
 /area/unishi/lounge)
 "ce" = (
 /obj/machinery/vending/tool,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/unishi/living)
 "cf" = (
 /obj/structure/janitorialcart,
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/floor/airless,
+/turf/floor/plating,
 /area/unishi/living)
 "cg" = (
 /obj/machinery/power/apc{
@@ -664,7 +654,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/bridge)
 "ch" = (
 /obj/random/medical/lite,
@@ -735,7 +725,7 @@
 "co" = (
 /obj/random/tool,
 /obj/structure/closet/toolcloset,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/unishi/living)
 "cp" = (
 /obj/structure/bed/padded,
@@ -856,11 +846,11 @@
 /area/unishi/lounge)
 "cA" = (
 /obj/effect/wingrille_spawn/reinforced,
-/turf/floor,
+/turf/floor/plating,
 /area/space)
 "cB" = (
 /obj/effect/wingrille_spawn/reinforced,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/living)
 "cC" = (
 /obj/structure/bed/chair/padded/brown,
@@ -1617,7 +1607,7 @@
 /area/unishi/living)
 "ew" = (
 /obj/random/maintenance,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/space)
 "ex" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -1861,7 +1851,7 @@
 /area/unishi/living)
 "fb" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/living)
 "fc" = (
 /obj/structure/bed/chair/armchair/black,
@@ -2006,7 +1996,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/living)
 "XA" = (
 /obj/structure/railing/mapped,
@@ -6321,7 +6311,7 @@ aa
 aa
 aa
 aa
-ae
+aJ
 aO
 aO
 aO
@@ -6422,8 +6412,8 @@ aa
 aa
 aa
 aC
-ae
-ae
+aJ
+aJ
 aP
 aP
 aP
@@ -6518,8 +6508,8 @@ aa
 aa
 aa
 aa
-ae
-ae
+aJ
+aJ
 aD
 aD
 aD
@@ -6619,7 +6609,7 @@ aa
 aa
 aa
 aa
-ae
+aJ
 af
 af
 as
@@ -6925,7 +6915,7 @@ aa
 aa
 aa
 ac
-ad
+af
 ah
 an
 as
@@ -7026,8 +7016,8 @@ aa
 aa
 aa
 ab
-ad
-ad
+af
+af
 ai
 ao
 at
@@ -7129,7 +7119,7 @@ aa
 aa
 aa
 aa
-ad
+af
 aj
 ap
 as
@@ -7435,7 +7425,7 @@ aa
 aa
 aa
 aa
-ae
+aJ
 af
 af
 as
@@ -7538,8 +7528,8 @@ aa
 aa
 aa
 aa
-ae
-ae
+aJ
+aJ
 aD
 aD
 aD
@@ -7552,8 +7542,8 @@ aR
 aJ
 Um
 bB
-bv
-bv
+bY
+bY
 bX
 ce
 bW
@@ -7645,9 +7635,9 @@ aa
 aa
 aa
 aa
-ae
-ae
-ae
+aJ
+aJ
+aJ
 aP
 aP
 aP

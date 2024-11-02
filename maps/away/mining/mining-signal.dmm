@@ -106,9 +106,6 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/floor/tiled/white,
 /area/outpost/abandoned)
-"aA" = (
-/turf/floor,
-/area/outpost/abandoned)
 "aB" = (
 /obj/machinery/papershredder,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -376,10 +373,6 @@
 	},
 /turf/floor/tiled/white,
 /area/outpost/abandoned)
-"by" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/floor,
-/area/outpost/abandoned)
 "bz" = (
 /obj/item/ammo_casing/shotgun/pellet,
 /obj/item/ammo_casing/shotgun/pellet{
@@ -428,7 +421,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "bE" = (
 /obj/effect/floor_decal/corner/purple{
@@ -462,7 +455,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt/cigarbutt,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "bJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -506,11 +499,11 @@
 "bR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "bS" = (
 /obj/random/trash,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "bT" = (
 /obj/effect/floor_decal/corner/purple{
@@ -634,7 +627,7 @@
 "ck" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "cl" = (
 /obj/structure/hygiene/shower{
@@ -875,7 +868,7 @@
 "dd" = (
 /obj/structure/barricade,
 /obj/effect/decal/cleanable/dirt,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "de" = (
 /obj/structure/hygiene/shower{
@@ -973,7 +966,7 @@
 /obj/structure/door_assembly{
 	anchored = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "du" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
@@ -1104,7 +1097,7 @@
 /area/outpost/abandoned)
 "dO" = (
 /obj/structure/ore_box,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "dP" = (
 /obj/structure/closet/crate/large,
@@ -1730,7 +1723,7 @@
 	icon_state = "req_comp_rewired";
 	pixel_y = -32;
 	stat = 1;
-	dir = 2;
+	dir = 2
 	},
 /turf/floor/tiled/airless,
 /area/outpost/abandoned)
@@ -2470,7 +2463,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "vb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -2481,7 +2474,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/floor,
+/turf/floor/plating,
 /area/outpost/abandoned)
 "wb" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
@@ -15137,7 +15130,7 @@ bg
 af
 bt
 bJ
-aA
+aH
 af
 bZ
 tb
@@ -15534,8 +15527,8 @@ aa
 aa
 aa
 af
-aA
-aA
+aH
+aH
 aY
 az
 af
@@ -15737,8 +15730,8 @@ aa
 aa
 af
 aB
-aA
-aA
+aH
+aH
 az
 bm
 bw
@@ -15940,7 +15933,7 @@ aa
 af
 ax
 aL
-aA
+aH
 az
 af
 bx
@@ -16145,7 +16138,7 @@ aM
 aZ
 ax
 af
-aA
+aH
 bH
 bP
 af
@@ -16347,8 +16340,8 @@ af
 af
 af
 af
-by
-by
+gu
+gu
 bP
 af
 aa
@@ -16550,7 +16543,7 @@ ba
 bh
 af
 bz
-aA
+aH
 bR
 af
 aa
@@ -17762,7 +17755,7 @@ af
 af
 af
 bD
-by
+gu
 bP
 bZ
 cp
@@ -18771,7 +18764,7 @@ aI
 aI
 aI
 bo
-by
+gu
 bH
 bU
 af
@@ -19983,9 +19976,9 @@ aS
 ap
 aH
 af
-aA
+aH
 bH
-aA
+aH
 bP
 af
 cO
@@ -20187,8 +20180,8 @@ aa
 aa
 aa
 bH
-aA
-aA
+aH
+aH
 af
 cP
 do

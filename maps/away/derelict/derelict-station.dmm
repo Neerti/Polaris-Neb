@@ -1438,7 +1438,7 @@
 	id_tag = "constructionsite_outer";
 	locked = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/constructionsite/teleporter)
 "eS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
@@ -1448,7 +1448,7 @@
 	dir = 9;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/constructionsite/teleporter)
 "eU" = (
 /obj/machinery/door/airlock/external{
@@ -1456,7 +1456,7 @@
 	id_tag = "constructionsite_inner";
 	locked = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/constructionsite/teleporter)
 "eV" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1506,7 +1506,7 @@
 	dir = 10;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/constructionsite/teleporter)
 "fb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/blue,
@@ -1519,7 +1519,7 @@
 	dir = 6;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/constructionsite/teleporter)
 "fc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
@@ -1530,7 +1530,7 @@
 	id_tag = "constructionsite_inner";
 	locked = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/constructionsite/teleporter)
 "fd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
@@ -3442,7 +3442,7 @@
 /obj/machinery/camera/motion{
 	c_tag = "Construction Site Teleporter Airlock"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/constructionsite/teleporter)
 "AR" = (
 /obj/structure/grille,

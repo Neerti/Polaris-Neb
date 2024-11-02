@@ -16,14 +16,14 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "ae" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/structure/closet/crate/uranium,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "af" = (
 /obj/machinery/power/apc{
@@ -40,7 +40,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "ag" = (
 /turf/wall/r_wall,
@@ -56,13 +56,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "ak" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "al" = (
 /obj/structure/closet/crate/uranium,
@@ -72,7 +72,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "am" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on,
@@ -85,11 +85,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "ao" = (
 /obj/effect/wingrille_spawn/reinforced_borosilicate,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "ap" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -97,7 +97,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/wingrille_spawn/reinforced_borosilicate,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -125,20 +125,20 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "av" = (
 /obj/structure/barricade,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aw" = (
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "ax" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/closet/crate/uranium,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "ay" = (
 /turf/wall/titanium,
@@ -147,7 +147,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aA" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -156,7 +156,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -172,7 +172,7 @@
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aD" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -186,7 +186,7 @@
 	id_tag = "unishi_sensor";
 	pixel_y = 23
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aF" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -197,14 +197,14 @@
 	tag_exterior_door = "unishi_outer";
 	tag_interior_door = "unishi_inner"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aG" = (
 /turf/wall/ocp_wall,
 /area/unishi/engineroom)
 "aH" = (
 /obj/structure/tank_rack,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -212,20 +212,20 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aK" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 4;
 	target_pressure = 200
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aL" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -233,33 +233,33 @@
 	id_tag = "unishi_inner"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	dir = 8;
 	id_tag = "unishi_vent"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aN" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 4;
 	id_tag = "unishi_outer"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aO" = (
 /obj/machinery/atmospherics/unary/tank/oxygen{
 	volume = 3200
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "aP" = (
 /obj/machinery/atmospherics/unary/tank/hydrogen,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "aQ" = (
 /obj/machinery/power/apc{
@@ -276,7 +276,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "aR" = (
 /obj/structure/cable/yellow{
@@ -286,7 +286,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "aS" = (
 /obj/machinery/power/smes/buildable/max_cap_in_out,
@@ -298,7 +298,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "aT" = (
 /obj/structure/cable/yellow{
@@ -308,10 +308,10 @@
 /obj/structure/sign/warning/high_voltage{
 	dir = 4
 	},
-/turf/wall,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "aU" = (
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -328,7 +328,7 @@
 	pixel_x = 28;
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "aY" = (
 /obj/structure/sign/warning/airlock,
@@ -351,23 +351,23 @@
 	req_access = newlist()
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bb" = (
 /obj/machinery/atmospherics/binary/pump,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bc" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bd" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "be" = (
 /obj/machinery/power/terminal{
@@ -376,13 +376,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/vending/tool,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bg" = (
 /turf/wall/r_wall,
@@ -397,7 +397,7 @@
 	pixel_x = 24;
 	req_access = newlist()
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "bi" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
@@ -406,28 +406,28 @@
 /obj/structure/table,
 /obj/item/suit_cooling_unit,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bj" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bl" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bm" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -435,7 +435,7 @@
 /obj/machinery/vending/engivend{
 	req_access = newlist()
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
@@ -451,12 +451,12 @@
 	dir = 4;
 	pixel_x = -32
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "br" = (
 /obj/structure/closet/radiation,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -467,7 +467,7 @@
 /obj/machinery/vending/engineering{
 	req_access = newlist()
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bt" = (
 /obj/machinery/atmospherics/unary/outlet_injector/engine{
@@ -476,22 +476,22 @@
 	id_tag = "unishi_fuel_in";
 	use_power = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bu" = (
 /obj/effect/wallframe_spawn/reinforced_borosilicate,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bv" = (
 /obj/machinery/suit_cycler,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bw" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = newlist()
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -508,18 +508,18 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "by" = (
 /obj/structure/ladder,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineering)
 "bz" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /obj/machinery/suit_cycler,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bA" = (
 /obj/structure/cable/yellow{
@@ -527,7 +527,7 @@
 	},
 /obj/structure/closet/toolcloset,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bB" = (
 /obj/structure/cable/yellow{
@@ -536,7 +536,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bC" = (
 /obj/structure/cable/yellow{
@@ -545,7 +545,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bD" = (
 /obj/structure/cable/yellow{
@@ -584,11 +584,11 @@
 	sensor_name = "Tank";
 	sensor_tag = "n2_sensor"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bH" = (
 /obj/machinery/recharge_station,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -607,7 +607,7 @@
 	dir = 4
 	},
 /obj/machinery/floorlayer,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -617,14 +617,14 @@
 	dir = 9
 	},
 /obj/structure/reagent_dispensers/watertank,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bL" = (
 /obj/machinery/sparker{
 	id_tag = "unishi";
 	pixel_x = -20
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bM" = (
 /obj/machinery/atmospherics/unary/vent_pump/engine{
@@ -637,26 +637,26 @@
 	pump_direction = 0;
 	use_power = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced_borosilicate,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bO" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 10
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bR" = (
 /turf/wall,
@@ -682,20 +682,20 @@
 	pixel_x = -28;
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bW" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 9
 	},
 /obj/machinery/portable_atmospherics/canister/hydrogen,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bX" = (
 /obj/structure/closet/hydrant,
@@ -707,7 +707,7 @@
 /obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "bZ" = (
 /turf/wall/titanium,
@@ -717,20 +717,20 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "cb" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 1
 	},
 /obj/machinery/light/small,
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "cc" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "cd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -739,7 +739,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "ce" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
@@ -771,7 +771,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/unishi/engineroom)
 "Ic" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{

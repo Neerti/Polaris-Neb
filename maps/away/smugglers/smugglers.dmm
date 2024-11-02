@@ -3,7 +3,7 @@
 /turf/space,
 /area/space)
 "ab" = (
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "ac" = (
 /turf/unsimulated/mask,
@@ -21,10 +21,10 @@
 /area/smugglers/base)
 "ag" = (
 /obj/machinery/door/airlock/external,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "ah" = (
-/turf/floor,
+/turf/floor/rock,
 /area/space)
 "aj" = (
 /obj/item/ammo_casing/pistol/magnum{
@@ -37,11 +37,11 @@
 	pixel_y = -5
 	},
 /obj/effect/decal/cleanable/blood,
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "ak" = (
 /obj/effect/decal/cleanable/blood,
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "al" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -62,7 +62,7 @@
 	deployed = 1;
 	icon_state = "beartrap1"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "an" = (
 /turf/unsimulated/mask,
@@ -82,7 +82,7 @@
 	name = "Internal Airlock"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/black,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "ar" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -98,7 +98,7 @@
 	pixel_y = 7
 	},
 /obj/item/flashlight/flare/glowstick/yellow,
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "av" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -120,21 +120,21 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aw" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "ax" = (
 /obj/machinery/floodlight,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "ay" = (
 /obj/item/stack/cable_coil{
@@ -153,7 +153,7 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "az" = (
 /obj/machinery/port_gen/pacman,
@@ -163,7 +163,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aB" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -176,7 +176,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -185,7 +185,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aD" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
@@ -194,27 +194,27 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aE" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aH" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
@@ -234,7 +234,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aI" = (
 /obj/machinery/door/airlock/external{
@@ -246,7 +246,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aJ" = (
 /obj/item/beartrap{
@@ -264,7 +264,7 @@
 	id_tag = "asteroid_base_east_pump"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aK" = (
 /obj/machinery/door/airlock/external{
@@ -272,7 +272,7 @@
 	id_tag = "asteroid_base_east_outer";
 	locked = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aL" = (
 /obj/machinery/button/access/exterior{
@@ -281,11 +281,11 @@
 	pixel_x = -25;
 	pixel_y = 25
 	},
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "aM" = (
 /obj/random/trash,
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "aN" = (
 /obj/machinery/light/small{
@@ -294,13 +294,13 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aO" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aP" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -308,7 +308,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/wirecutters,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aQ" = (
 /obj/structure/cable,
@@ -322,7 +322,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aR" = (
 /obj/structure/cable{
@@ -331,7 +331,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aS" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -341,7 +341,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aT" = (
 /obj/machinery/light/small{
@@ -355,7 +355,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aU" = (
 /turf/wall,
@@ -364,59 +364,59 @@
 /obj/machinery/light/small/red{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aW" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aX" = (
 /obj/structure/rack{
 	dir = 8
 	},
 /obj/item/clothing/mask/breath,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aY" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "aZ" = (
 /obj/random/trash,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "ba" = (
 /obj/structure/closet/crate/plastic_smug_ammo,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /obj/item/paper/smug_1,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bc" = (
 /obj/random/ore_smug,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bd" = (
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "be" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/black,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bf" = (
 /obj/structure/rack{
@@ -426,23 +426,23 @@
 	pixel_x = 5
 	},
 /obj/item/tank/air,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bg" = (
 /obj/item/tool/xeno/hand{
 	pixel_x = -15
 	},
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "bh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bi" = (
 /obj/structure/closet/crate/plastic_smug_weapons,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bj" = (
 /obj/structure/closet/crate/plastic,
@@ -455,16 +455,16 @@
 	dir = 4;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bk" = (
 /obj/machinery/floodlight,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bl" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/light/small/red,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bm" = (
 /obj/structure/rack{
@@ -472,11 +472,11 @@
 	},
 /obj/random/voidsuit,
 /obj/random/voidhelmet,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bn" = (
 /obj/structure/boulder,
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "bo" = (
 /obj/item/stack/material/ore/silver,
@@ -484,7 +484,7 @@
 	pixel_x = 10;
 	pixel_y = -5
 	},
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "bp" = (
 /obj/structure/cable{
@@ -493,11 +493,11 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bq" = (
 /obj/item/paper/smug_2,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "br" = (
 /obj/structure/ore_box,
@@ -519,7 +519,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bs" = (
 /obj/structure/ore_box,
@@ -534,14 +534,14 @@
 /obj/random/ore_smug,
 /obj/random/ore_smug,
 /obj/random/ore_smug,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bt" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bu" = (
 /obj/structure/cable{
@@ -552,7 +552,7 @@
 	pixel_y = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/black,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bv" = (
 /turf/wall,
@@ -567,7 +567,7 @@
 	pixel_y = -2
 	},
 /obj/item/stack/material/ore/slag,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "by" = (
 /obj/structure/ore_box,
@@ -581,11 +581,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bz" = (
 /obj/random/ore_smug,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bA" = (
 /obj/structure/cable{
@@ -594,14 +594,14 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bB" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/office)
 "bC" = (
 /obj/structure/cable{
@@ -641,24 +641,24 @@
 	dir = 10;
 	icon_state = "warning"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bG" = (
 /obj/effect/floor_decal/industrial/warning,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bH" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bI" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -693,12 +693,12 @@
 /area/smugglers/office)
 "bM" = (
 /obj/effect/decal/cleanable/blood,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bN" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/powered/scrubber,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bO" = (
 /obj/machinery/portable_atmospherics/canister/air,
@@ -707,7 +707,7 @@
 	dir = 4;
 	pixel_y = 8
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bP" = (
 /mob/living/simple_animal/hostile/malf_drone,
@@ -719,32 +719,32 @@
 "bR" = (
 /obj/structure/table,
 /obj/random/tech_supply,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bS" = (
 /obj/structure/table,
 /obj/random/toolbox,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bT" = (
 /obj/structure/table,
 /obj/random/firstaid,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bU" = (
 /obj/structure/closet/crate/trashcart,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bV" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bW" = (
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/base)
 "bX" = (
 /obj/machinery/constructable_frame/machine_frame,
@@ -771,7 +771,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/dorms)
 "cc" = (
 /turf/wall,
@@ -825,7 +825,7 @@
 /area/smugglers/dorms)
 "cj" = (
 /obj/effect/decal/cleanable/cobweb,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/smugglers/dorms)
 "cl" = (
 /obj/effect/decal/cleanable/dirt,
@@ -851,18 +851,18 @@
 /obj/machinery/door/airlock/maintenance{
 	name = "Toilet"
 	},
-/turf/floor,
+/turf/floor/plating,
 /area/smugglers/dorms)
 "cp" = (
 /obj/effect/decal/cleanable/vomit,
 /obj/random/medical/lite,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/smugglers/dorms)
 "cq" = (
 /obj/structure/hygiene/toilet{
 	dir = 8
 	},
-/turf/floor/airless,
+/turf/floor/plating,
 /area/smugglers/dorms)
 "cr" = (
 /obj/structure/bed/chair{
@@ -946,7 +946,7 @@
 "db" = (
 /obj/effect/decal/cleanable/blood,
 /obj/abstract/landmark/corpse/doctor,
-/turf/floor,
+/turf/floor/rock,
 /area/mine/explored)
 "eb" = (
 /obj/machinery/light/small{
@@ -959,7 +959,7 @@
 	pixel_y = 30
 	},
 /obj/random/soap,
-/turf/floor/airless,
+/turf/floor/plating,
 /area/smugglers/dorms)
 
 (1,1,1) = {"
