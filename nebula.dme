@@ -1459,6 +1459,7 @@
 #include "code\game\objects\structures\fountain.dm"
 #include "code\game\objects\structures\fuel_port.dm"
 #include "code\game\objects\structures\girders.dm"
+#include "code\game\objects\structures\grandfather_clock.dm"
 #include "code\game\objects\structures\grille.dm"
 #include "code\game\objects\structures\hand_cart.dm"
 #include "code\game\objects\structures\handrail.dm"

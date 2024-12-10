@@ -34,10 +34,26 @@
 	slot = slot_w_uniform_str
 	uid = "gear_fantasy_loincloth"
 
+/decl/loadout_option/fantasy/uniform/shirt
+	name = "shirt"
+	path = /obj/item/clothing/shirt/crafted
+	uid = "gear_fantasy_shirt"
+	available_materials = list(
+		/decl/material/solid/organic/cloth,
+		/decl/material/solid/organic/cloth/wool,
+		/decl/material/solid/organic/cloth/hemp,
+		/decl/material/solid/organic/cloth/linen
+	)
+
 /decl/loadout_option/fantasy/uniform/jerkin
 	name = "jerkin"
 	path = /obj/item/clothing/shirt/jerkin
 	uid = "gear_fantasy_jerkin"
+	available_materials = list(
+		/decl/material/solid/organic/leather,
+		/decl/material/solid/organic/skin/feathers,
+		/decl/material/solid/organic/skin/fur
+	)
 
 /decl/loadout_option/fantasy/uniform/tunic
 	name = "tunic"
@@ -101,6 +117,11 @@
 	name = "cloak, hooded"
 	path = /obj/item/clothing/suit/hooded_cloak
 	uid = "gear_fantasy_cloak_hooded"
+
+/decl/loadout_option/fantasy/suit/winter_cloak
+	name = "cloak, winter"
+	path = /obj/item/clothing/suit/hooded_cloak/winter
+	uid = "gear_fantasy_cloak_hooded_winter"
 
 /decl/loadout_option/fantasy/suit/poncho
 	name = "poncho"

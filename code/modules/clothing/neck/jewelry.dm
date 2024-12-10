@@ -12,6 +12,9 @@
 	gender = PLURAL
 	material = /decl/material/solid/organic/wood/ebony
 
+/obj/item/clothing/neck/necklace/prayer_beads/bone
+	material = /decl/material/solid/organic/bone
+
 /obj/item/clothing/neck/necklace/prayer_beads/gold
 	material = /decl/material/solid/metal/gold
 
