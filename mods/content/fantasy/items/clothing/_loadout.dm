@@ -203,7 +203,7 @@
 
 /decl/loadout_option/fantasy/neck/prayer_beads
 	name = "prayer beads"
-	path = /obj/item/clothing/neck/necklace/prayer_beads
+	path = /obj/item/clothing/neck/prayer_beads
 	available_materials = list(
 		/decl/material/solid/organic/bone,
 		/decl/material/solid/stone/marble,
@@ -308,6 +308,18 @@
 		"water" =       /decl/material/liquid/water,
 		"white wine" =  /decl/material/liquid/ethanol/wine/premium,
 	))
+
+/decl/loadout_option/fantasy/utility/crutch
+	name = "crutch"
+	path = /obj/item/crutch/wooden/padded
+	available_materials = list(
+		/decl/material/solid/organic/wood/oak,
+		/decl/material/solid/organic/wood/mahogany,
+		/decl/material/solid/organic/wood/maple,
+		/decl/material/solid/organic/wood/ebony,
+		/decl/material/solid/organic/wood/walnut
+	)
+	uid = "gear_fantasy_crutch"
 
 /decl/loadout_option/fantasy/eyes
 	abstract_type = /decl/loadout_option/fantasy/eyes
