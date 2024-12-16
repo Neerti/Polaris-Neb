@@ -42,9 +42,9 @@
 		return TRUE
 	if(istype(used_item, /obj/item/paper) || istype(used_item, /obj/item/photo))
 		if(held)
-			to_chat(usr, SPAN_WARNING("\The [src] already has something inside it."))
+			to_chat(user, SPAN_WARNING("\The [src] already has something inside it."))
 		else if(user.try_unequip(used_item, src))
-			to_chat(usr, SPAN_NOTICE("You slip \the [used_item] into \the [src]."))
+			to_chat(user, SPAN_NOTICE("You slip \the [used_item] into \the [src]."))
 			held = used_item
 		return TRUE
 	return ..()
