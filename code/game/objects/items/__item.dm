@@ -319,11 +319,7 @@
 		var/list/available_recipes = list()
 		for(var/decl/crafting_stage/initial_stage in SSfabrication.find_crafting_recipes(type))
 			if(initial_stage.can_begin_with(src) && ispath(initial_stage.completion_trigger_type))
-				var/atom/movable/prop = initial_stage.completion_trigger_type
-				if(initial_stage.stack_consume_amount > 1)
-					available_recipes[initial_stage] = "[initial_stage.stack_consume_amount] [initial(prop.name)]\s"
-				else
-					available_recipes[initial_stage] = "\a [initial(prop.name)]"
+				available_recipes[initial_stage] = initial_stage.generate_completion_string()
 
 		if(length(available_recipes))
 
@@ -382,7 +378,7 @@
 	return ..(user, distance, "", jointext(desc_comp, "<br/>"))
 
 /obj/item/check_mousedrop_adjacency(var/atom/over, var/mob/user)
-	. = (loc == user && istype(over, /obj/screen/inventory)) || ..()
+	. = (loc == user && istype(over, /obj/screen)) || ..()
 
 /obj/item/handle_mouse_drop(atom/over, mob/user, params)
 
@@ -1056,16 +1052,38 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 	if(item_flags & ITEM_FLAG_IS_BELT)
 		LAZYADD(., slot_belt_str)
 
+	// Where are we usually worn?
+	var/default_slot = get_fallback_slot()
+	if(default_slot)
+		LAZYDISTINCTADD(., default_slot)
+		// Uniforms can show or hide ID.
+		if(default_slot == slot_w_uniform_str)
+			LAZYDISTINCTADD(., slot_wear_id_str)
+
+	// Currently this proc is used for clothing updates, so we
+	// need to care what slot we are being worn in, if any.
+	if(ismob(loc))
+		var/mob/wearer = loc
+		var/equipped_slot = wearer.get_equipped_slot_for_item(src)
+		if(equipped_slot)
+			LAZYDISTINCTADD(., equipped_slot)
+
 // Updates the icons of the mob wearing the clothing item, if any.
 /obj/item/proc/update_clothing_icon(do_update_icon = TRUE)
+
+	// Accessories should pass this back to their holder.
+	if(isitem(loc))
+		var/obj/item/holder = loc
+		return holder.update_clothing_icon(do_update_icon)
+
+	// If we're not on a mob, we do not care.
+	if(!ismob(loc))
+		return FALSE
+
+	// We refresh our equipped slot and any associated slots that might depend on the state of this slot.
 	var/mob/wearer = loc
-	if(!istype(wearer))
-		return FALSE
-	var/equip_slots = get_associated_equipment_slots()
-	if(!islist(equip_slots))
-		return FALSE
-	for(var/slot in equip_slots)
-		wearer.update_equipment_overlay(slot, FALSE)
+	for(var/equipped_slot in get_associated_equipment_slots())
+		wearer.update_equipment_overlay(equipped_slot, FALSE)
 	if(do_update_icon)
 		wearer.update_icon()
 	return TRUE
@@ -1096,9 +1114,6 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 	else if(current_size > STAGE_ONE)
 		step_towards(src,S)
 	else ..()
-
-/obj/item/check_mousedrop_adjacency(var/atom/over, var/mob/user)
-	. = (loc == user && istype(over, /obj/screen)) || ..()
 
 // Supplied during loadout gear tweaking.
 /obj/item/proc/set_custom_name(var/new_name)
@@ -1245,3 +1260,12 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 			continue
 		reagent_overlay.overlays += overlay_image(icon, modified_reagent_overlay, reagent.get_reagent_overlay_color(reagents), RESET_COLOR | RESET_ALPHA)
 	return reagent_overlay
+
+/obj/item/on_reagent_change()
+	. = ..()
+	// You can't put liquids in clay/sand/dirt vessels, sorry.
+	if(reagents?.total_liquid_volume > 0 && material && material.hardness <= MAT_VALUE_MALLEABLE && !QDELETED(src))
+		visible_message(SPAN_DANGER("\The [src] falls apart!"))
+		squash_item()
+		if(!QDELETED(src))
+			physically_destroyed()
