@@ -49,6 +49,12 @@
 			ammo_magazine = new magazine_type(src)
 	update_icon()
 
+/obj/item/gun/projectile/Destroy()
+	chambered = null
+	loaded.Cut()
+	ammo_magazine = null
+	return ..()
+
 /obj/item/gun/projectile/consume_next_projectile()
 	if(!is_jammed && prob(jam_chance))
 		src.visible_message("<span class='danger'>\The [src] jams!</span>")
@@ -354,6 +360,7 @@
 
 /decl/interaction_handler/projectile/remove_silencer
 	name = "Remove Silencer"
+	examine_desc = "remove the silencer"
 
 /decl/interaction_handler/projectile/remove_silencer/invoked(atom/target, mob/user, obj/item/prop)
 	var/obj/item/gun/projectile/gun = target
@@ -361,6 +368,7 @@
 
 /decl/interaction_handler/projectile/unload_ammo
 	name = "Remove Ammunition"
+	examine_desc = "unload the ammunition"
 
 /decl/interaction_handler/projectile/unload_ammo/invoked(atom/target, mob/user, obj/item/prop)
 	var/obj/item/gun/projectile/gun = target

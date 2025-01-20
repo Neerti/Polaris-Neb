@@ -208,7 +208,10 @@
 		. += (reagents.total_volume > FLUID_SHALLOW) ? 6 : 3
 
 /turf/attack_hand(mob/user)
+
 	SHOULD_CALL_PARENT(FALSE)
+
+	// Find an atom that should be intercepting this click.
 	var/datum/extension/turf_hand/highest_priority_intercept
 	for(var/atom/thing in contents)
 		var/datum/extension/turf_hand/intercept = get_extension(thing, /datum/extension/turf_hand)
@@ -218,6 +221,7 @@
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
 		var/atom/intercepting_atom = highest_priority_intercept.holder
 		return intercepting_atom.attack_hand(user)
+
 	return FALSE
 
 /turf/attack_robot(var/mob/user)
@@ -283,19 +287,6 @@
 
 	if(IS_COIL(W) && try_build_cable(W, user))
 		return TRUE
-
-	if(reagents?.total_volume >= FLUID_PUDDLE)
-		if(ATOM_IS_OPEN_CONTAINER(W) && W.reagents)
-			var/taking = min(reagents.total_volume, REAGENTS_FREE_SPACE(W.reagents))
-			if(taking > 0)
-				to_chat(user, SPAN_NOTICE("You fill \the [W] with [reagents.get_primary_reagent_name()] from \the [src]."))
-				reagents.trans_to(W, taking)
-				return TRUE
-
-		if(user.check_intent(I_FLAG_HELP))
-			user.visible_message(SPAN_NOTICE("\The [user] dips \the [W] into \the [reagents.get_primary_reagent_name()]."))
-			W.fluid_act(reagents)
-			return TRUE
 
 	return ..()
 
@@ -408,11 +399,13 @@
 				L.Add(t)
 	return L
 
-/turf/proc/contains_dense_objects()
+/turf/proc/contains_dense_objects(exceptions)
 	if(density)
 		return 1
 	for(var/atom/A in src)
 		if(A.density && !(A.atom_flags & ATOM_FLAG_CHECKS_BORDER))
+			if(exceptions && (exceptions == A || (A in exceptions)))
+				continue
 			return 1
 	return 0
 
@@ -697,8 +690,8 @@
 	return TRUE
 
 /turf/clean(clean_forensics = TRUE)
-	for(var/obj/effect/decal/cleanable/blood/B in contents)
-		B.clean(clean_forensics)
+	for(var/obj/effect/decal/cleanable/filth in contents)
+		filth.clean(clean_forensics)
 	. = ..()
 
 //returns 1 if made bloody, returns 0 otherwise
@@ -802,30 +795,33 @@
 /turf/get_affecting_weather()
 	return weather
 
+/turf/can_be_poured_into(atom/source)
+	return !density
+
 /turf/get_alt_interactions(mob/user)
 	. = ..()
 	LAZYADD(., /decl/interaction_handler/show_turf_contents)
-	if(user)
-		var/obj/item/held = user.get_active_held_item() || user.get_usable_hand_slot_organ()
-		if(istype(held))
-			if(reagents?.total_volume >= FLUID_PUDDLE)
-				LAZYADD(., /decl/interaction_handler/dip_item)
-				LAZYADD(., /decl/interaction_handler/fill_from)
-			LAZYADD(., /decl/interaction_handler/empty_into)
-			if(IS_SHOVEL(held))
-				if(can_dig_pit(held.material?.hardness))
-					LAZYDISTINCTADD(., /decl/interaction_handler/dig/pit)
-				if(can_dig_trench(held.material?.hardness))
-					LAZYDISTINCTADD(., /decl/interaction_handler/dig/trench)
-			if(IS_PICK(held) && can_dig_trench(held.material?.hardness, using_tool = TOOL_PICK))
-				LAZYDISTINCTADD(., /decl/interaction_handler/dig/trench)
-			if(IS_HOE(held) && can_dig_farm(held.material?.hardness))
-				LAZYDISTINCTADD(., /decl/interaction_handler/dig/farm)
+	var/obj/item/held = user ? (user.get_active_held_item() || user.get_usable_hand_slot_organ()) : null
+	if(!istype(held))
+		return
+	if(IS_SHOVEL(held))
+		if(can_dig_pit(held.material?.hardness))
+			LAZYADD(., /decl/interaction_handler/dig/pit)
+		if(can_dig_trench(held.material?.hardness))
+			LAZYADD(., /decl/interaction_handler/dig/trench)
+	if(IS_PICK(held) && can_dig_trench(held.material?.hardness, using_tool = TOOL_PICK))
+		LAZYADD(., /decl/interaction_handler/dig/trench)
+	if(IS_HOE(held) && can_dig_farm(held.material?.hardness))
+		LAZYADD(., /decl/interaction_handler/dig/farm)
+
+/turf/proc/can_show_coating_footprints()
+	return simulated
 
 /decl/interaction_handler/show_turf_contents
 	name = "Show Turf Contents"
 	expected_user_type = /mob
 	interaction_flags = 0
+	examine_desc = "list everything on $TARGET_THEM$"
 
 /decl/interaction_handler/show_turf_contents/invoked(atom/target, mob/user, obj/item/prop)
 	target.show_atom_list_for_turf(user, get_turf(target))
@@ -838,6 +834,7 @@
 
 /decl/interaction_handler/dig/trench
 	name = "Dig Trench"
+	examine_desc = "dig a trench"
 
 /decl/interaction_handler/dig/trench/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
@@ -852,6 +849,7 @@
 
 /decl/interaction_handler/dig/pit
 	name = "Dig Pit"
+	examine_desc = "dig a pit"
 
 /decl/interaction_handler/dig/pit/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
@@ -861,6 +859,7 @@
 
 /decl/interaction_handler/dig/farm
 	name = "Dig Farm Plot"
+	examine_desc = "dig a farm plot"
 
 /decl/interaction_handler/dig/farm/invoked(atom/target, mob/user, obj/item/prop)
 	prop ||= user.get_usable_hand_slot_organ() // Allows drakes to dig.
@@ -870,3 +869,5 @@
 
 /turf/take_vaporized_reagent(reagent, amount)
 	return assume_gas(reagent, round(amount / REAGENT_UNITS_PER_GAS_MOLE))
+
+/turf/proc/is_purged()

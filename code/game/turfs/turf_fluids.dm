@@ -116,7 +116,7 @@
 /turf/fluid_act(var/datum/reagents/fluids)
 	..()
 	if(!QDELETED(src) && fluids?.total_volume)
-		fluids.touch_turf(src)
+		fluids.touch_turf(src, touch_atoms = FALSE) // Handled in fluid_act() below.
 		for(var/atom/movable/AM as anything in get_contained_external_atoms())
 			if(!AM.submerged())
 				continue
@@ -179,6 +179,8 @@
 		var/decl/material/primary_reagent = reagents.get_primary_reagent_decl()
 		if(primary_reagent && (REAGENT_VOLUME(reagents, primary_reagent.type) >= primary_reagent.slippery_amount))
 			last_slipperiness = primary_reagent.slipperiness
+		else
+			last_slipperiness = 0
 		if(!fluid_overlay)
 			fluid_overlay = new(src, TRUE)
 		fluid_overlay.update_icon()
@@ -190,6 +192,7 @@
 		SSfluids.pending_flows -= src
 		if(last_slipperiness > 0)
 			wet_floor(last_slipperiness)
+		last_slipperiness = 0
 
 	for(var/checkdir in global.cardinal)
 		var/turf/neighbor = get_step_resolving_mimic(src, checkdir)

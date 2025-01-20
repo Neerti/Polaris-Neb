@@ -16,6 +16,7 @@
 	base_eye_color       = "#00aa00"
 	nail_noun            = "claws"
 	uid                  = "bodytype_feline"
+	footprints_icon      = 'icons/mob/footprints/footprints_paw.dmi'
 
 	age_descriptor = /datum/appearance_descriptor/age/tajaran
 
@@ -52,10 +53,25 @@
 	)
 
 /decl/bodytype/feline/Initialize()
-	equip_adjust = list(
-		slot_glasses_str =   list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list( 0, 2),  "[WEST]" = list(0, 2)),
-		slot_wear_mask_str = list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list( 0, 2),  "[WEST]" = list(0, 2)),
-		slot_head_str =      list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list( 0, 2),  "[WEST]" = list(0, 2))
+	_equip_adjust = list(
+		(slot_glasses_str) = list(
+			"[NORTH]" = list(0, 2),
+			"[EAST]"  = list(0, 2),
+			"[SOUTH]" = list( 0, 2),
+			"[WEST]"  = list(0, 2)
+		),
+		(slot_wear_mask_str) = list(
+			"[NORTH]" = list(0, 2),
+			"[EAST]"  = list(0, 2),
+			"[SOUTH]" = list( 0, 2),
+			"[WEST]"  = list(0, 2)
+		),
+		(slot_head_str) = list(
+			"[NORTH]" = list(0, 2),
+			"[EAST]"  = list(0, 2),
+			"[SOUTH]" = list( 0, 2),
+			"[WEST]"  = list(0, 2)
+		)
 	)
 	. = ..()
 

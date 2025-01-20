@@ -8,8 +8,14 @@
 /atom/proc/can_interact_with_storage(user, strict = FALSE)
 	return isliving(user)
 
+/atom/proc/get_required_interaction_dexterity()
+	return DEXTERITY_NONE
+
 /atom/proc/attack_hand(mob/user)
 	SHOULD_CALL_PARENT(TRUE)
+
+	if(!user.check_dexterity(get_required_interaction_dexterity(), silent = TRUE))
+		return FALSE
 
 	if(can_interact_with_storage(user, strict = TRUE) && storage && user.check_dexterity((DEXTERITY_HOLD_ITEM|DEXTERITY_EQUIP_ITEM), TRUE))
 		add_fingerprint(user)
@@ -17,6 +23,9 @@
 		return TRUE
 
 	if(handle_grab_interaction(user))
+		return TRUE
+
+	if(try_handle_interactions(user, get_standard_interactions(user), user?.get_active_held_item(), check_alt_interactions = FALSE))
 		return TRUE
 
 	if(!LAZYLEN(climbers) || (user in climbers) || !user.check_dexterity(DEXTERITY_HOLD_ITEM, silent = TRUE))

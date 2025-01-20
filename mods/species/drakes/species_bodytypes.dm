@@ -46,6 +46,8 @@
 	antaghud_offset_x    = 16
 	override_organ_types = list(BP_DRAKE_GIZZARD = /obj/item/organ/internal/drake_gizzard)
 	uid                  = "bodytype_drake"
+	footprints_icon      = 'icons/mob/footprints/footprints_paw.dmi'
+
 	additional_emotes    = list(
 		/decl/emote/audible/drake_warble,
 		/decl/emote/audible/drake_purr,
@@ -94,6 +96,13 @@
 		/decl/emote/visible/tfist
 	)
 
+	character_preview_screen_locs = list(
+		"1" = "character_preview_map:1,4:36",
+		"2" = "character_preview_map:1,3:31",
+		"4" = "character_preview_map:1,2:26",
+		"8" = "character_preview_map:1,1:21"
+	)
+
 	available_mob_postures = list(
 		/decl/posture/standing,
 		/decl/posture/lying/drake,
@@ -134,48 +143,48 @@
 		ARMOR_BOMB   = ARMOR_BOMB_PADDED
 	)
 
-	var/list/sitting_equip_adjust
-	var/list/lying_equip_adjust
+	VAR_PRIVATE/list/_sitting_equip_adjust
+	VAR_PRIVATE/list/_lying_equip_adjust
 
 /decl/bodytype/quadruped/grafadreka/Initialize()
-	if(!length(equip_adjust))
-		equip_adjust = list(
-			slot_head_str = list(
+	if(!length(_equip_adjust))
+		_equip_adjust = list(
+			(slot_head_str) = list(
 				"[NORTH]" = list(16,  -8),
 				"[SOUTH]" = list(16, -12),
-				"[EAST]" =  list(38,  -8),
-				"[WEST]" =  list(-6,  -8)
+				"[EAST]"  = list(38,  -8),
+				"[WEST]"  = list(-6,  -8)
 			)
 		)
 
-	if(!length(sitting_equip_adjust))
-		sitting_equip_adjust = list(
-			slot_head_str = list(
+	if(!length(_sitting_equip_adjust))
+		_sitting_equip_adjust = list(
+			(slot_head_str) = list(
 				"[NORTH]" = list(16, -2),
 				"[SOUTH]" = list(16, -2),
-				"[EAST]" =  list(22, -2),
-				"[WEST]" =  list(12, -2)
+				"[EAST]"  = list(22, -2),
+				"[WEST]"  = list(12, -2)
 			)
 		)
 
-	if(!length(lying_equip_adjust))
-		lying_equip_adjust = list(
-			slot_head_str = list(
+	if(!length(_lying_equip_adjust))
+		_lying_equip_adjust = list(
+			(slot_head_str) = list(
 				"[NORTH]" = list( 24, -24),
 				"[SOUTH]" = list( 24, -24),
-				"[EAST]" =  list( 24, -24),
-				"[WEST]" =  list(-10, -24)
+				"[EAST]"  = list( 24, -24),
+				"[WEST]"  = list(-10, -24)
 			)
 		)
 
 	return ..()
 
-/decl/bodytype/quadruped/grafadreka/get_equip_adjust(mob/mob)
+/decl/bodytype/quadruped/grafadreka/get_equip_adjustments(mob/mob)
 	switch(mob.current_posture?.name)
 		if("lying", "resting")
-			return lying_equip_adjust
+			return _lying_equip_adjust
 		if("sitting")
-			return sitting_equip_adjust
+			return _sitting_equip_adjust
 	return ..()
 
 /decl/bodytype/quadruped/grafadreka/hatchling
@@ -184,6 +193,7 @@
 	blood_overlays      = 'mods/species/drakes/icons/hatchling_blood.dmi'
 	eye_icon            = 'mods/species/drakes/icons/hatchling_eyes.dmi'
 	icon_template       = 'icons/mob/human_races/species/template.dmi'
+	damage_overlays     = 'icons/mob/human_races/species/default_damage_overlays.dmi'
 	bodytype_category   = BODYTYPE_GRAFADREKA_HATCHLING
 	mob_size            = MOB_SIZE_SMALL
 	pixel_offset_x      = 0
@@ -203,34 +213,35 @@
 		/decl/emote/audible/drake_sneeze
 	)
 	age_descriptor = /datum/appearance_descriptor/age/grafadreka/hatchling
+	character_preview_screen_locs = null
 	uid = "bodytype_drake_hatchling"
 
 /decl/bodytype/quadruped/grafadreka/hatchling/Initialize()
-	if(!length(equip_adjust))
-		equip_adjust = list(
-			slot_head_str = list(
+	if(!length(_equip_adjust))
+		_equip_adjust = list(
+			(slot_head_str) = list(
 				"[NORTH]" = list( 0, -18),
 				"[SOUTH]" = list( 0, -18),
-				"[EAST]" =  list( 8, -18),
-				"[WEST]" =  list(-8, -18)
+				"[EAST]"  = list( 8, -18),
+				"[WEST]"  = list(-8, -18)
 			)
 		)
-	if(!length(sitting_equip_adjust))
-		sitting_equip_adjust = list(
-			slot_head_str = list(
+	if(!length(_sitting_equip_adjust))
+		_sitting_equip_adjust = list(
+			(slot_head_str) = list(
 				"[NORTH]" = list( 0, -14),
 				"[SOUTH]" = list( 0, -14),
-				"[EAST]" =  list( 4, -14),
-				"[WEST]" =  list(-4, -14)
+				"[EAST]"  = list( 4, -14),
+				"[WEST]"  = list(-4, -14)
 			)
 		)
-	if(!length(lying_equip_adjust))
-		lying_equip_adjust = list(
-			slot_head_str = list(
+	if(!length(_lying_equip_adjust))
+		_lying_equip_adjust = list(
+			(slot_head_str) = list(
 				"[NORTH]" = list( 0, -24),
 				"[SOUTH]" = list( 0, -24),
-				"[EAST]" =  list( 0, -24),
-				"[WEST]" =  list( 0, -24)
+				"[EAST]"  = list( 0, -24),
+				"[WEST]"  = list( 0, -24)
 			)
 		)
 	return ..()

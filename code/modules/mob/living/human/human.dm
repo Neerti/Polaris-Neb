@@ -5,14 +5,12 @@
 	icon_state = "body_m_s"
 	mob_sort_value = 6
 	max_health = 150
-
-	var/list/hud_list[10]
 	var/embedded_flag	  //To check if we've need to roll for damage on movement while an item is imbedded in us.
 
 /mob/living/human/Initialize(mapload, species_name, datum/mob_snapshot/supplied_appearance)
 
 	current_health = max_health
-	setup_hud_overlays()
+	reset_hud_overlays()
 	var/list/newargs = args.Copy(2)
 	setup_human(arglist(newargs))
 	global.human_mob_list |= src
@@ -31,18 +29,6 @@
 
 	if(. != INITIALIZE_HINT_QDEL)
 		post_setup(arglist(newargs))
-
-/mob/living/human/proc/setup_hud_overlays()
-	hud_list[HEALTH_HUD]      = new /image/hud_overlay('icons/mob/hud_med.dmi', src, "100")
-	hud_list[STATUS_HUD]      = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudhealthy")
-	hud_list[LIFE_HUD]	      = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudhealthy")
-	hud_list[ID_HUD]          = new /image/hud_overlay(global.using_map.id_hud_icons, src, "hudunknown")
-	hud_list[WANTED_HUD]      = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudblank")
-	hud_list[IMPLOYAL_HUD]    = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudblank")
-	hud_list[IMPCHEM_HUD]     = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudblank")
-	hud_list[IMPTRACK_HUD]    = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudblank")
-	hud_list[SPECIALROLE_HUD] = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudblank")
-	hud_list[STATUS_HUD_OOC]  = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudhealthy")
 
 /mob/living/human/Destroy()
 	global.human_mob_list -= src
@@ -1070,40 +1056,6 @@
 	var/decl/bodytype/bodytype = get_bodytype()
 	var/datum/appearance_descriptor/age = LAZYACCESS(bodytype.appearance_descriptors, "age")
 	LAZYSET(appearance_descriptors, "age", (age ? age.sanitize_value(val) : 30))
-
-/mob/living/human/HandleBloodTrail(turf/T, old_loc)
-	// Tracking blood
-	var/obj/item/source
-	var/obj/item/clothing/shoes/shoes = get_equipped_item(slot_shoes_str)
-	if(istype(shoes))
-		shoes.handle_movement(src, MOVING_QUICKLY(src))
-		if(shoes.coating && shoes.coating.total_volume > 1)
-			source = shoes
-	else
-		for(var/foot_tag in list(BP_L_FOOT, BP_R_FOOT))
-			var/obj/item/organ/external/stomper = GET_EXTERNAL_ORGAN(src, foot_tag)
-			if(stomper && stomper.coating && stomper.coating.total_volume > 1)
-				source = stomper
-	if(!source)
-		species.handle_trail(src, T, old_loc)
-		return
-
-	var/list/bloodDNA
-	var/bloodcolor
-	var/list/blood_data = REAGENT_DATA(source.coating, /decl/material/liquid/blood)
-	if(blood_data)
-		bloodDNA = list(blood_data[DATA_BLOOD_DNA] = blood_data[DATA_BLOOD_TYPE])
-	else
-		bloodDNA = list()
-	bloodcolor = source.coating.get_color()
-	source.remove_coating(1)
-	update_equipment_overlay(slot_shoes_str)
-
-	if(species.get_move_trail(src))
-		T.AddTracks(species.get_move_trail(src),bloodDNA, dir, 0, bloodcolor) // Coming
-		if(isturf(old_loc))
-			var/turf/old_turf = old_loc
-			old_turf.AddTracks(species.get_move_trail(src), bloodDNA, 0, dir, bloodcolor) // Going
 
 /mob/living/human/remove_implant(obj/item/implant, surgical_removal = FALSE, obj/item/organ/external/affected)
 	if((. = ..()) && !surgical_removal)

@@ -17,8 +17,6 @@
 		QDEL_NULL(hud_used)
 	if(active_storage)
 		active_storage.close(src)
-	if(istype(ability_master))
-		QDEL_NULL(ability_master)
 	if(istype(skillset))
 		QDEL_NULL(skillset)
 	QDEL_NULL_LIST(grabbed_by)
@@ -57,7 +55,6 @@
 	QDEL_NULL_SCREEN(radio_use_icon)
 	QDEL_NULL_SCREEN(gun_move_icon)
 	QDEL_NULL_SCREEN(gun_setting_icon)
-	QDEL_NULL_SCREEN(ability_master)
 	QDEL_NULL_SCREEN(zone_sel)
 
 /mob/Initialize()
@@ -68,7 +65,6 @@
 	if(!istype(move_intent))
 		move_intent = GET_DECL(move_intent)
 	. = ..()
-	ability_master = new(null, src)
 	refresh_ai_handler()
 	START_PROCESSING(SSmobs, src)
 
@@ -242,8 +238,6 @@
 	SHOULD_NOT_SLEEP(TRUE)
 	if(QDELETED(src))
 		return PROCESS_KILL
-	if(ability_master)
-		ability_master.update_spells(0)
 
 #define UNBUCKLED 0
 #define PARTIALLY_BUCKLED 1
@@ -896,7 +890,7 @@
 
 /mob/proc/toggle_throw_mode(force_set)
 	in_throw_mode = isnull(force_set) ? !in_throw_mode : force_set
-	throw_icon?.icon_state = "act_throw_[in_throw_mode ? "on" : "off"]"
+	throw_icon?.update_icon()
 
 /mob/proc/toggle_antag_pool()
 	set name = "Toggle Add-Antag Candidacy"
@@ -1110,10 +1104,18 @@
 /mob/proc/get_bodytype()
 	RETURN_TYPE(/decl/bodytype)
 
+// Bit of a stub for now, but should return the bodytype specific
+// to the slot and organ being checked in the future instead of
+// always using the mob root bodytype.
+/mob/proc/get_equipment_bodytype(slot, bodypart)
+	RETURN_TYPE(/decl/bodytype)
+	var/decl/bodytype/root_bodytype = get_bodytype()
+	return root_bodytype?.resolve_to_equipment_bodytype(src)
+
 /mob/proc/has_body_flag(flag, default = FALSE)
 	var/decl/bodytype/root_bodytype = get_bodytype()
 	if(istype(root_bodytype))
-		return root_bodytype.body_flags & flag
+		return (root_bodytype.body_flags & flag)
 	return default
 
 /// Update the mouse pointer of the attached client in this mob.

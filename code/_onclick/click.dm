@@ -116,11 +116,6 @@
 	var/sdepth = A.storage_depth(src)
 	if((!isturf(A) && A == loc) || (sdepth != -1 && sdepth <= 1))
 		if(holding)
-
-			// AI driven mobs have a melee telegraph that needs to be handled here.
-			if(check_intent(I_FLAG_HARM) && istype(A) && (!do_attack_windup_checking(A) || holding != get_active_held_item()))
-				return TRUE
-
 			var/resolved = holding.resolve_attackby(A, src, params)
 			if(!resolved && A && holding)
 				holding.afterattack(A, src, 1, params) // 1 indicates adjacency
@@ -142,10 +137,6 @@
 	if(isturf(A) || isturf(A.loc) || (sdepth != -1 && sdepth <= 1))
 		if(A.Adjacent(src)) // see adjacent.dm
 			if(holding)
-
-				// AI driven mobs have a melee telegraph that needs to be handled here.
-				if(check_intent(I_FLAG_HARM) && istype(A) && (!do_attack_windup_checking(A) || holding != get_active_held_item()))
-					return TRUE
 
 				// Return 1 in attackby() to prevent afterattack() effects (when safely moving items for example)
 				var/resolved = holding.resolve_attackby(A, src, params)
@@ -217,18 +208,7 @@
 	if(istype(G) && G.Touch(A,1))
 		return TRUE
 
-	// Pick up items.
-	if(check_dexterity(DEXTERITY_HOLD_ITEM, silent = TRUE))
-		return A.attack_hand(src)
-
-	// TODO: some way to check if we SHOULD be doing an attack windup here;
-	// corgis attacking a tree, for example, will do the windup animation despite
-	// having no interaction or message shown at the end of it.
-	// AI driven mobs have a melee telegraph that needs to be handled here.
-	if(check_intent(I_FLAG_HARM) && istype(A) && !do_attack_windup_checking(A))
-		return TRUE
-
-	return FALSE
+	return A.attack_hand(src)
 
 /*
 	Ranged unarmed attack:
@@ -302,10 +282,17 @@
 	return A.CtrlClick(src)
 
 /atom/proc/CtrlClick(var/mob/user)
+	if(loc == user)
+		var/decl/interaction_handler/handler = get_quick_interaction_handler(user)
+		if(handler)
+			var/using_item = user.get_active_held_item() || user.get_usable_hand_slot_organ()
+			if(handler.is_possible(src, user, using_item))
+				return handler.invoked(src, user, using_item)
 	return FALSE
 
 /atom/movable/CtrlClick(var/mob/living/user)
-	return try_make_grab(user, defer_hand = TRUE) || ..()
+	if(!(. = ..()) && loc != user)
+		return try_make_grab(user, defer_hand = TRUE) || ..()
 
 /*
 	Alt click
@@ -315,7 +302,7 @@
 	A.AltClick(src)
 
 /atom/proc/AltClick(var/mob/user)
-	if(try_handle_interactions(user, get_alt_interactions(user), user?.get_active_held_item()))
+	if(try_handle_interactions(user, get_alt_interactions(user), user?.get_active_held_item(), check_alt_interactions = TRUE))
 		return TRUE
 	if(user?.get_preference_value(/datum/client_preference/show_turf_contents) == PREF_ALT_CLICK)
 		. = show_atom_list_for_turf(user, get_turf(src))

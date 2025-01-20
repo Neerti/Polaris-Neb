@@ -1,5 +1,0 @@
-author: MistakeNot4892
-changes:
-  - {tweak: Raw plant oil no longer works as lantern fuel; it must be mixed with powdered
-      graphite first.}
-delete-after: true
