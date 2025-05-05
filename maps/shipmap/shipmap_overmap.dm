@@ -2,6 +2,29 @@
 	map_size_x = 50
 	map_size_y = 50
 
+/datum/map/shipmap/create_trade_hubs()
+	var/datum/overmap/overmap = global.overmaps_by_name[OVERMAP_ID_SPACE]
+	var/turf/T = locate(26, 26, overmap.assigned_z)
+	new /obj/effect/overmap/trade_hub/errai/shipyard(T)
+
+
+/*
+/datum/map/tradeship/create_trade_hubs()
+	new /datum/trade_hub/singleton/tradeship
+
+/datum/trade_hub/singleton/tradeship
+	name = "Tradehouse Freight Network"
+
+/datum/trade_hub/singleton/tradeship/get_initial_traders()
+	return list(
+		/datum/trader/xeno_shop,
+		/datum/trader/medical,
+		/datum/trader/mining,
+		/datum/trader/books
+	)
+
+*/
+
 /obj/machinery/shipcomms
 	effective_range = 5
 

@@ -2,5 +2,9 @@
 #define MODPACK_ERRAI
 // BEGIN_INCLUDE
 #include "mapping_aids/mapping_colors.dm"
+#include "trading/_trade_hub.dm"
+#include "trading/traders/_trader.dm"
+#include "trading/traders/shipyard.dm"
+#include "trading/traders/canteen.dm"
 // END INCLUDE
 #endif
