@@ -21,11 +21,13 @@
 	#include "../../mods/content/dungeon_loot/_dungeon_loot.dme"
 	#include "../../mods/content/government/_government.dme"
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
+	#include "../../mods/content/merchants/_merchants.dme"
 	#include "../../mods/content/modern_earth/_modern_earth.dme"
 	#include "../../mods/content/mouse_highlights/_mouse_highlight.dme"
 	#include "../../mods/content/pheromones/_pheromones.dme"
 	#include "../../mods/content/psionics/_psionics.dme"
 	#include "../../mods/content/standard_jobs/_standard_jobs.dme"
+	#include "../../mods/content/standard_merchants/_standard_merchants.dme"
 	#include "../../mods/content/supermatter/_supermatter.dme"
 	#include "../../mods/content/xenobiology/_xenobiology.dme"
 

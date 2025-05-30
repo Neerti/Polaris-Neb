@@ -1,3 +1,4 @@
+/*
 /client/proc/list_traders()
 	set category = "Debug"
 	set name = "List Traders"
@@ -32,3 +33,4 @@
 	var/choice = input(src, "Choose a trader to remove.") as null|anything in hub.traders
 	if(choice && (choice in hub.traders))
 		qdel(choice)
+*/

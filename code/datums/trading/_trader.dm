@@ -295,6 +295,6 @@
 	return get_response(TRADER_BRIBE_REFUSAL, "How about... no?")
 
 /datum/trader/Destroy(force)
-	if(hub)
-		hub.traders -= src
+//	if(hub)
+//		hub.traders -= src
 	. = ..()

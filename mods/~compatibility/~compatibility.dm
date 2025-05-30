@@ -26,3 +26,7 @@
 #ifdef MODPACK_CORPORATE
 #include "patches/corporate.dm"
 #endif
+
+#ifdef MODPACK_STANDARD_MERCHANTS
+#include "patches/standard_merchants.dm"
+#endif
