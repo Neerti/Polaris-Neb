@@ -3869,10 +3869,6 @@
 /obj/machinery/breakerbox/activated{
 	RCon_tag = "Research Substation Bypass"
 	},
-/obj/structure/cable,
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/research)
 "dqC" = (
@@ -4078,12 +4074,6 @@
 "dvk" = (
 /obj/machinery/breakerbox/activated{
 	RCon_tag = "Civilian Substation Bypass"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
 	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/civilian)
@@ -10171,12 +10161,6 @@
 	},
 /obj/machinery/breakerbox/activated{
 	RCon_tag = "Medical Substation Bypass"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
 	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/medical)
@@ -16790,10 +16774,6 @@
 /obj/machinery/breakerbox/activated{
 	RCon_tag = "Deck Two Substation Bypass"
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/structure/cable,
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/deck_two)
 "nFy" = (
@@ -26634,10 +26614,6 @@
 /obj/machinery/breakerbox/activated{
 	RCon_tag = "Security Substation Bypass"
 	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green,
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/security)
 "vDG" = (

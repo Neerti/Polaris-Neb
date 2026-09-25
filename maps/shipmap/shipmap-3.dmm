@@ -6271,10 +6271,6 @@
 /obj/machinery/breakerbox/activated{
 	RCon_tag = "Deck One Substation Bypass"
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/obj/structure/cable,
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/deck_one)
 "tM" = (
@@ -11032,12 +11028,6 @@
 /area/ship/errai/command/first_officers_office)
 "JK" = (
 /obj/machinery/breakerbox/activated,
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/command)
 "JM" = (
