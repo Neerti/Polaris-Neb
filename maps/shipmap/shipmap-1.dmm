@@ -7598,12 +7598,18 @@
 /turf/floor/plating,
 /area/ship/errai/engineering/construction/site_a)
 "hun" = (
-/obj/machinery/breakerbox{
-	RCon_tag = "Atmospherics Substation Bypass"
-	},
 /obj/structure/sign/deck/third{
 	pixel_x = 0;
 	pixel_y = 32
+	},
+/obj/machinery/breakerbox/activated{
+	RCon_tag = "Atmospherics Substation Bypass"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/atmospherics)
@@ -10381,9 +10387,13 @@
 /turf/floor/plating,
 /area/ship/errai/maintenance/engineering_port)
 "kjy" = (
-/obj/machinery/breakerbox{
+/obj/machinery/breakerbox/activated{
 	RCon_tag = "Deck Three Substation Bypass"
 	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/obj/structure/cable,
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/deck_three)
 "kjL" = (
@@ -15624,12 +15634,18 @@
 /turf/floor/tiled/steel_grid,
 /area/ship/errai/engineering/port_hallway)
 "oVa" = (
-/obj/machinery/breakerbox{
-	RCon_tag = "Engineering Substation Bypass"
-	},
 /obj/structure/sign/deck/third{
 	pixel_x = 0;
 	pixel_y = 32
+	},
+/obj/machinery/breakerbox/activated{
+	RCon_tag = "Engineering Substation Bypass"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/engineering)
@@ -23074,9 +23090,13 @@
 /turf/floor/tiled,
 /area/ship/errai/supply/supply_office)
 "vOS" = (
-/obj/machinery/breakerbox{
+/obj/machinery/breakerbox/activated{
 	RCon_tag = "Supply Substation Bypass"
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green,
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/supply)
 "vPG" = (

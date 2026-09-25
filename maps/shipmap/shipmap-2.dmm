@@ -2764,16 +2764,15 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/structure/cable{
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/medical)
 "cwG" = (
@@ -3867,8 +3866,12 @@
 /turf/floor/tiled/dark/monotile,
 /area/ship/errai/security/brig)
 "dqg" = (
-/obj/machinery/breakerbox{
+/obj/machinery/breakerbox/activated{
 	RCon_tag = "Research Substation Bypass"
+	},
+/obj/structure/cable,
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/research)
@@ -4073,8 +4076,14 @@
 /turf/floor/tiled/steel_grid,
 /area/ship/errai/hallway/deck_two_fore_hallway)
 "dvk" = (
-/obj/machinery/breakerbox{
+/obj/machinery/breakerbox/activated{
 	RCon_tag = "Civilian Substation Bypass"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/civilian)
@@ -10157,11 +10166,17 @@
 /turf/floor/tiled/white/monotile,
 /area/ship/errai/research/gas_mixing)
 "ita" = (
-/obj/machinery/breakerbox{
-	RCon_tag = "Medical Substation Bypass"
-	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/breakerbox/activated{
+	RCon_tag = "Medical Substation Bypass"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/medical)
@@ -16772,9 +16787,13 @@
 /turf/floor/tiled/old_cargo/dark,
 /area/ship/errai/research/mech_bay)
 "nFd" = (
-/obj/machinery/breakerbox{
+/obj/machinery/breakerbox/activated{
 	RCon_tag = "Deck Two Substation Bypass"
 	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/obj/structure/cable,
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/deck_two)
 "nFy" = (
@@ -26612,9 +26631,13 @@
 /turf/floor/tiled/white,
 /area/ship/errai/service/kitchen)
 "vCD" = (
-/obj/machinery/breakerbox{
+/obj/machinery/breakerbox/activated{
 	RCon_tag = "Security Substation Bypass"
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green,
 /turf/floor/plating,
 /area/ship/errai/maintenance/substation/security)
 "vDG" = (
