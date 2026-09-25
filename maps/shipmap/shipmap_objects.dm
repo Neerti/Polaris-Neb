@@ -35,7 +35,8 @@
 		/obj/item/chems/drinks,
 		/obj/item/chems/condiment
 	)
-	return istype(O) && REAGENT_TOTAL_VOLUME(O) && is_type_in_list(O, _allowed_types)
+	var/datum/reagents/reagents = O.reagents
+	return istype(O) && reagents && REAGENT_TOTAL_VOLUME(reagents) && is_type_in_list(O, _allowed_types)
 
 
 /obj/machinery/computer/modular/preset/pilot
